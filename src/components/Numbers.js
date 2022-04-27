@@ -1,32 +1,30 @@
 import React from 'react';
 import calculate from '../logic/calculate';
 
-const Numbers = () => {
-  const clasesNames = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'dot'];
-  const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, '.'];
-  const operators = ['÷', 'x', '-', '+', '=', 'AC', '+/-', '%'];
-  const clasesSigns = ['dividBy', 'times', 'difference', 'add', 'equal', 'ac', 'sign', 'percent'];
-  let object = { total: null, next: null, operation: null };
+const Numbers = (props) => {
+  const [objectValue, setObjectValue] = React.useState({ total: null, next: null, operation: null });
   const handleClick = (event) => {
     const resultArea = document.getElementsByClassName("header")[0];
     const content = event.target.textContent;
-    object = calculate(object, content);
-    if (object.hasOwnProperty('next')) {
-      const result = (object.total === null) ? 0 : object.total;
-      resultArea.innerHTML = (object.next === null) ? result : object.next;
+    const { total, next, operation } = calculate(objectValue, content);
+    const actualObject = { total, next, operation };
+    setObjectValue(actualObject);
+    if (actualObject.hasOwnProperty('next')) {
+      const result = (actualObject.total === null) ? 0 : actualObject.total;
+      resultArea.innerHTML = (actualObject.next === null) ? result : actualObject.next;
     }
   };
   return (
     <div className="container">
       <div className="header">0</div>
-      {operators.map((val, index) => {
+      {props.operators.map((val, index) => {
         let value = '';
-        value = (<button className={clasesSigns[index]} onClick={handleClick}>{val}</button>);
+        value = (<button className={props.clasesSigns[index]} onClick={handleClick}>{val}</button>);
         return value;
       })}
-      {nums.map((val, index) => {
+      {props.nums.map((val, index) => {
         let value = '';
-        value = (<button className={clasesNames[index]} onClick={handleClick}>{[val]}</button>);
+        value = (<button className={props.clasesNames[index]} onClick={handleClick}>{[val]}</button>);
         return value;
       })}
     </div>
