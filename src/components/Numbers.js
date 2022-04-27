@@ -1,37 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Numbers extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { };
-  }
-
-  render() {
-    return (
-      <div className="container">
-        <div className="header">0</div>
-        <div className="footer">0</div>
-        <div className="ac">AC</div>
-        <div className="sign">+/-</div>
-        <div className="percent">%</div>
-        <div className="dividBy">&#247;</div>
-        <div className="times">x</div>
-        <div className="difference">-</div>
-        <div className="add">+</div>
-        <div className="equal">=</div>
-        <div className="seven">7</div>
-        <div className="eight">8</div>
-        <div className="nine">9</div>
-        <div className="four">4</div>
-        <div className="five">5</div>
-        <div className="six">6</div>
-        <div className="one">1</div>
-        <div className="two">2</div>
-        <div className="three">3</div>
-        <div className="dot">.</div>
-      </div>
-    );
-  }
-}
+const Numbers = () => {
+  const clasesNames = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+  const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const operator = [String.fromCharCode(247), 'x', '-', '+', '=', 'AC', '+/-', '%', '.'];
+  const clasesSigns = ['dividBy', 'times', 'difference', 'add', 'equal', 'ac', 'sign', 'percent', 'dot'];
+  return (
+    <div className="container">
+      <div className="header">0</div>
+      {operator.map((val, index) => {
+        let value = '';
+        value = (<div className={clasesSigns[index]}>{val}</div>);
+        return value;
+      })}
+      {nums.map((val, index) => {
+        let value = '';
+        value = (<div className={clasesNames[index]}>{[val]}</div>);
+        return value;
+      })}
+    </div>
+  );
+};
 
 export default Numbers;
