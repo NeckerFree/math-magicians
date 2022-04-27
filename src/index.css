@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family:
     -apple-system,
@@ -24,4 +24,104 @@ code {
     Consolas,
     'Courier New',
     monospace;
+} */
+* {
+  --app-color-dark-gray: #858694;
+  --app-color-orange: #f5913e;
+  --app-color-light-gray: #e0e0e0;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px;
+  grid-template-rows: 80px 80px 80px 80px 80px 80px;
+  gap: 2px 2px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header header"
+    "ac sign percent dividBy"
+    "seven eight nine times"
+    "four five six difference"
+    "one two three add"
+    "footer footer dot equal";
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  font-size: large;
+}
+
+.ac,
+.sign,
+.percent,
+.seven,
+.eight,
+.nine,
+.four,
+.five,
+.six,
+.one,
+.two,
+.three,
+.footer,
+.dot {
+  background-color: var(--app-color-light-gray);
+  text-align: center;
+  line-height: 80px;
+}
+
+.dividBy,
+.times,
+.difference,
+.add,
+.equal {
+  background-color: var(--app-color-orange);
+  text-align: center;
+  line-height: 80px;
+}
+
+.header {
+  grid-area: header;
+  background-color: var(--app-color-dark-gray);
+  color: white;
+  text-align: right;
+  line-height: 80px;
+  padding-right: 10px;
+}
+
+.footer { grid-area: footer; }
+
+.ac { grid-area: ac; }
+
+.sign { grid-area: sign; }
+
+.percent { grid-area: percent; }
+
+.dividBy { grid-area: dividBy; }
+
+.times { grid-area: times; }
+
+.difference { grid-area: difference; }
+
+.add { grid-area: add; }
+
+.equal { grid-area: equal; }
+
+.seven { grid-area: seven; }
+
+.eight { grid-area: eight; }
+
+.nine { grid-area: nine; }
+
+.four { grid-area: four; }
+
+.five { grid-area: five; }
+
+.six { grid-area: six; }
+
+.one { grid-area: one; }
+
+.two { grid-area: two; }
+
+.three { grid-area: three; }
+
+.dot { grid-area: dot; }
