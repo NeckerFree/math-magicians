@@ -14,7 +14,16 @@ class Calculator extends Component {
   }
 
   render() {
-    return (<section><Numbers clasesNames={clasesNames} nums={nums} operators={operators} clasesSigns={clasesSigns}/></section>);
+    return (
+      <section>
+        <Numbers
+          clasesNames={clasesNames}
+          nums={nums}
+          operators={operators}
+          clasesSigns={clasesSigns}
+        />
+      </section>
+    );
   }
 }
 
