@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import calculate from '../logic/calculate';
 
 class Numbers extends React.Component {
@@ -59,4 +59,10 @@ class Numbers extends React.Component {
   }
 }
 
+Numbers.propTypes = {
+  clasesNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+  nums: PropTypes.arrayOf(PropTypes.string).isRequired,
+  operators: PropTypes.arrayOf(PropTypes.string).isRequired,
+  clasesSigns: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 export default Numbers;
