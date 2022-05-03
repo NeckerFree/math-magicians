@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
 * {
   --app-color-dark-gray: #858694;
   --app-color-orange: #f5913e;
   --app-color-light-gray: #e0e0e0;
+  --app-color-border: #81818c;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
 }
 
 .container {
@@ -17,8 +24,7 @@
     "four five six difference"
     "one two three add"
     "zero zero dot equal";
-  margin-left: auto;
-  margin-right: auto;
+  border: 2px solid black;
   max-width: 500px;
 }
 
@@ -61,7 +67,6 @@
   line-height: 60px;
   padding-right: 30px;
   font-size: xx-large;
-  border: 2px solid black;
 }
 
 .zero { grid-area: zero; }
@@ -101,3 +106,59 @@
 .three { grid-area: three; }
 
 .dot { grid-area: dot; }
+
+.navHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  text-align: center;
+  border-right: 1px solid var(--app-color-border);
+  padding: 0 10px 0 10px;
+  height: 20px;
+}
+
+.menu li:first-child {
+  border-left: 1px solid var(--app-color-border);
+}
+
+.calculatorSection {
+  margin: 10px 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.calculatorSection p {
+  text-align: left;
+}
+
+.homeSection {
+  margin: 10px 30px;
+}
+
+.homeSection p {
+  text-align: justify;
+  margin: 10px 0;
+}
+
+.quoteSection {
+  margin-top: 15%;
+}
+
+.quoteSection h3 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}

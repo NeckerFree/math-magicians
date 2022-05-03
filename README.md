@@ -12,7 +12,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://github.com/NeckerFree/math-magicians/)
+[Live Demo Link]()
 
 
 ## Getting Started
@@ -26,7 +26,9 @@ To get a local copy up and running follow these simple example steps.
 - On the terminal, navigate into the directory like so: `cd math-magicians`
 
 ### Install
-- in visual studio code build with the command `npm start`
+in visual studio code
+-  run the command `npm install` to install all the necessary dependencies
+-  run the command `npm start` to start the app.
 
 ## Authors
 
