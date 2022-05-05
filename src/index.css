@@ -1,13 +1,164 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+* {
+  --app-color-dark-gray: #858694;
+  --app-color-orange: #f5913e;
+  --app-color-light-gray: #e0e0e0;
+  --app-color-border: #81818c;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px;
+  grid-template-rows: 80px 80px 80px 80px 80px 80px;
+  gap: 2px 2px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header header"
+    "ac sign percent dividBy"
+    "seven eight nine times"
+    "four five six difference"
+    "one two three add"
+    "zero zero dot equal";
+  border: 2px solid black;
+  max-width: 500px;
+}
+
+.ac,
+.sign,
+.percent,
+.seven,
+.eight,
+.nine,
+.four,
+.five,
+.six,
+.one,
+.two,
+.three,
+.zero,
+.dot {
+  background-color: var(--app-color-light-gray);
+  text-align: center;
+  line-height: 60px;
+  font-size: xx-large;
+}
+
+.dividBy,
+.times,
+.difference,
+.add,
+.equal {
+  background-color: var(--app-color-orange);
+  text-align: center;
+  line-height: 60px;
+  font-size: xx-large;
+}
+
+.header {
+  grid-area: header;
+  background-color: var(--app-color-dark-gray);
+  color: white;
+  text-align: right;
+  line-height: 60px;
+  padding-right: 30px;
+  font-size: xx-large;
+}
+
+.zero { grid-area: zero; }
+
+.ac { grid-area: ac; }
+
+.sign { grid-area: sign; }
+
+.percent { grid-area: percent; }
+
+.dividBy { grid-area: dividBy; }
+
+.times { grid-area: times; }
+
+.difference { grid-area: difference; }
+
+.add { grid-area: add; }
+
+.equal { grid-area: equal; }
+
+.seven { grid-area: seven; }
+
+.eight { grid-area: eight; }
+
+.nine { grid-area: nine; }
+
+.four { grid-area: four; }
+
+.five { grid-area: five; }
+
+.six { grid-area: six; }
+
+.one { grid-area: one; }
+
+.two { grid-area: two; }
+
+.three { grid-area: three; }
+
+.dot { grid-area: dot; }
+
+.navHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu li {
+  text-align: center;
+  border-right: 1px solid var(--app-color-border);
+  padding: 0 10px 0 10px;
+  height: 20px;
+}
+
+.menu li:first-child {
+  border-left: 1px solid var(--app-color-border);
+}
+
+.calculatorSection {
+  margin: 10px 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.calculatorSection p {
+  text-align: left;
+}
+
+.homeSection {
+  margin: 10px 30px;
+}
+
+.homeSection p {
+  text-align: justify;
+  margin: 10px 0;
+}
+
+.quoteSection {
+  margin-top: 15%;
+}
+
+.quoteSection h3 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
 }
