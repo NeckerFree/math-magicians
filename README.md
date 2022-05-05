@@ -12,7 +12,8 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link]()
+[Netlify Deply](https://neckerfree-math-magicians.netlify.app)
+[Heroku Deply](https://neckerfree-math-magicians.herokuapp.com)
 
 
 ## Getting Started
