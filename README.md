@@ -12,8 +12,9 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link]()
+[Netlify Deploy](https://neckerfree-math-magicians.netlify.app)
 
+[Heroku Deploy](https://neckerfree-math-magicians.herokuapp.com)
 
 ## Getting Started
 
